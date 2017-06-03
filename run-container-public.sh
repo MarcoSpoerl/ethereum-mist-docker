@@ -3,8 +3,10 @@
 CONFIG_DIR=`pwd`/config
 ETHEREUM_DIR=`pwd`/ethereum
 
-IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
-xhost + $IP
+if [ "$(uname)" == "Darwin" ]; then
+    IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+    xhost + $IP
+fi
 
 docker run -d \
   -v $CONFIG_DIR:/root/.config \

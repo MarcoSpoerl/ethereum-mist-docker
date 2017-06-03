@@ -14,9 +14,9 @@ docker build -t ethereum-mist .
 
 ## Prerequisites to Run GUI Applications
 
-Please note that the following scripts have been tested on macOS only.
+The following scripts have been tested on macOS and Ubuntu.
 
-You have to prepare your system in order to run [Docker for Mac and GUI applications](https://fredrikaverpil.github.io/2016/07/31/docker-for-mac-and-gui-applications/).
+On macOS, you have to prepare your system in order to run [Docker for Mac and GUI applications](https://fredrikaverpil.github.io/2016/07/31/docker-for-mac-and-gui-applications/).
 
 ## Run on Public Networks
 
