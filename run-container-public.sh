@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CONFIG_DIR=`pwd`/config
+CONTRACTS_DIR=`pwd`/contracts
 ETHEREUM_DIR=`pwd`/ethereum
 
 if [ "$(uname)" == "Darwin" ]; then
@@ -10,6 +11,7 @@ fi
 
 docker run -d \
   -v $CONFIG_DIR:/root/.config \
+  -v $CONTRACTS_DIR:/root/contracts \
   -v $ETHEREUM_DIR:/root/.ethereum \
   -v /etc/localtime:/etc/localtime \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
