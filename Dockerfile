@@ -25,9 +25,9 @@ WORKDIR /root
 
 COPY md5checksum .
 
-RUN wget https://github.com/ethereum/mist/releases/download/v0.8.10/Mist-linux64-0-8-10.zip &&\
+RUN wget https://github.com/ethereum/mist/releases/download/v0.9.0/Mist-linux64-0-9-0.zip &&\
   md5sum -c md5checksum &&\
-  unzip Mist-linux64-0-8-10.zip &&\
+  unzip Mist-linux64-0-9-0.zip &&\
   mv linux-unpacked mist
 
 WORKDIR /root/mist

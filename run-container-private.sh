@@ -19,7 +19,8 @@ docker run -d \
   --name ethereum-mist-private \
   --network ethereumdocker_default \
   ethereum-mist \
-  --rpc http://bootstrap:8545
+  --rpc http://bootstrap:8545 \
+  --swarmurl null
 
 # docker logs --follow ethereum-mist-private
 
