@@ -1,4 +1,4 @@
-FROM ubuntu:zesty
+FROM ubuntu:artful
 
 LABEL maintainer "Marco Spoerl <ms@marcospoerl.de>"
 
