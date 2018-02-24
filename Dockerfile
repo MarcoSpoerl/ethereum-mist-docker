@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
   libnss3 \
   libxss1 \
   libxtst6 \
+  libx11-xcb1 \
   locales \
   unzip \
   wget \
@@ -23,11 +24,11 @@ ENV LC_ALL en_US.UTF-8
 
 WORKDIR /root
 
-COPY md5checksum .
+COPY sha256checksum .
 
-RUN wget https://github.com/ethereum/mist/releases/download/v0.9.0/Mist-linux64-0-9-0.zip &&\
-  md5sum -c md5checksum &&\
-  unzip Mist-linux64-0-9-0.zip &&\
+RUN wget https://github.com/ethereum/mist/releases/download/v0.9.3/Mist-linux64-0-9-3.zip &&\
+  sha256sum -c sha256checksum &&\
+  unzip Mist-linux64-0-9-3.zip &&\
   mv linux-unpacked mist
 
 WORKDIR /root/mist
