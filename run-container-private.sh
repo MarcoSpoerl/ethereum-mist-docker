@@ -13,7 +13,6 @@ docker run -d \
   -v $CONFIG_DIR:/root/.config \
   -v $CONTRACTS_DIR:/root/contracts \
   -v $ETHEREUM_DIR:/root/.ethereum \
-  -v /etc/localtime:/etc/localtime \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -e DISPLAY=$IP:0 \
   --name ethereum-mist-private \

@@ -26,10 +26,9 @@ WORKDIR /root
 
 COPY sha256checksum .
 
-RUN wget https://github.com/ethereum/mist/releases/download/v0.9.3/Mist-linux64-0-9-3.zip &&\
+RUN wget https://github.com/ethereum/mist/releases/download/v0.10.0/Mist-linux64-0-10-0.zip &&\
   sha256sum -c sha256checksum &&\
-  unzip Mist-linux64-0-9-3.zip &&\
-  mv linux-unpacked mist
+  unzip Mist-linux64-0-10-0.zip -d mist
 
 WORKDIR /root/mist
 
